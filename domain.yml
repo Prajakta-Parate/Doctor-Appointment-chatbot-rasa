@@ -1,0 +1,60 @@
+version: "2.0"
+
+intents:
+  - greet
+  - book_appointment
+  - reason_for_appointment
+  - patient_name
+  - goodbye
+  # - affirm
+  # - deny
+  # - mood_great
+  # - mood_unhappy
+  # - bot_challenge
+  # - supply_contact_info
+
+entities:
+- name
+
+slots:
+  name:
+    type: text
+
+responses:
+  utter_greet:
+  - text:  Doctor's office. I am a bot. How can I help you?
+
+  utter_why_see_doc:
+  - text: why do you need to see the doctor?
+
+  utter_time:
+  - text: doctor is available at 1 pm
+
+  utter_ask_for_patient_info:
+  - text: what is your name?
+  - text: What's your name, please?
+
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  # utter_did_that_help:
+  # - text: "Did that help you?"
+
+  # utter_happy:
+  # - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  # utter_iamabot:
+  # - text: "I am a bot, powered by Rasa."
+
+
+  utter_acknowledge_provided_info:
+  - text: Thanks {name} for provided your info!
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

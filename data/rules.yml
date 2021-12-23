@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+# - rule: appointment-1
+#   steps:
+#   - intent: patient_name
+#   - action: utter_why_see_doc
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot

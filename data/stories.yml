@@ -1,0 +1,43 @@
+version: "2.0"
+
+stories:
+- story: Doctor's appointment
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: book_appointment
+  - action: utter_ask_for_patient_info
+  - intent: patient_name
+    entities:
+    - name
+  - action: utter_why_see_doc
+  - intent: reason_for_appointment
+  - action: utter_time
+  - action: utter_acknowledge_provided_info
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
